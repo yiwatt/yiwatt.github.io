@@ -6,6 +6,18 @@ body {
   font-weight: 700;
 }
 
+a:link {
+  color: #9f9f9f;
+}
+
+a:visited {
+  color: #9f9f9f;
+}
+
+a: hover {
+  opacity: 50%;
+}
+
 .navigation {
   width: 950px;
   position: relative;
