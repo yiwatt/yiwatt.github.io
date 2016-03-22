@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #9f9f9f;
@@ -8,14 +12,22 @@ body {
 
 a:link {
   color: #9f9f9f;
+  text-decoration: none;
 }
 
 a:visited {
   color: #9f9f9f;
 }
 
-a: hover {
-  opacity: 50%;
+a:hover {
+  color: #d3d3d3;
+  -webkit-transition: color 0.1s; /* Safari */
+  transition: color 0.1s;
+}
+
+div {
+  vertical-align: middle;
+  margin: 0 auto;
 }
 
 .navigation {
@@ -34,7 +46,7 @@ a: hover {
 .menu {
   display: inline-block;
   float: left;
-  margin-left: 320px;
+  margin-left: 360px;
 }
 
 ul {
@@ -62,11 +74,17 @@ i {
   margin: 0 10px;
 }
 
-.btn {
+.content {
   clear: both;
   position: relative;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
   width: 950px;
-  margin-top: 150px;
+  margin-top: 80px;
   margin-left: 550px;
 }
 
@@ -80,13 +98,18 @@ button {
   font-weight: 700;
   color: #9f9f9f;
   border-radius: 2px;
+  height: 400px;
+}
+
+.fig {
+  margin-left: 450px;
 }
 
 .footer {
   width: 950px;
   clear: both;
   position: relative;
-  margin-top: 150px;
+  margin-top: 80px;
   margin-left: 150px;
   margin-bottom: 80px;
 }
