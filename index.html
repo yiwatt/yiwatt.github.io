@@ -13,9 +13,11 @@
 
 		<div class="menu">
 			<ul>
-				<li class="current">Work</li>
+				<li class="current">Visuals</li>
+				<li>Branding</li>
+				<li>Words</li>
+				<li>UX/UI</li>
 				<a href="about.html"><li>About</li></a>
-				<li>Blog</li>
 			</ul>
 		</div>
 
@@ -24,9 +26,51 @@
 		</div>
 	</div>
 
-	<div class="content btn">
-		<button type="button">Coming Soon!</button>
+	<div class="content">
+		<img src="http://2.bp.blogspot.com/-4JBx732I1Dc/VZFS61z4zII/AAAAAAAAFbY/eN7CuSVOzm0/s640/Photo%2B19-5-15%2B8%2B39%2B45%2Bpm.jpg" class="gallery"/>
+		<img src="http://3.bp.blogspot.com/-7gm8J4zAfqc/VZFS4wCbjbI/AAAAAAAAFbc/Vy05MvBjYVQ/s640/Photo%2B19-5-15%2B8%2B24%2B14%2Bpm.jpg" class="gallery"/>
+		<img src="http://3.bp.blogspot.com/-L9zqqxTB1cc/VYPslEoRrBI/AAAAAAAAFVo/bInULWbL_wQ/s640/Photo%2B18-5-15%2B10%2B27%2B07%2Bam.jpg" class="gallery"/>
+		<img src="http://2.bp.blogspot.com/-669Z3frCFsM/VXpa_5QBfNI/AAAAAAAAFKw/H_WszrKIRaI/s640/Photo%2B17-5-15%2B1%2B10%2B45%2Bpm.jpg" class="gallery"/>
+		<img src="http://1.bp.blogspot.com/-PE2D2oucmeQ/VXpbC7nQw1I/AAAAAAAAFLs/AfLm55nr_lw/s640/Photo%2B17-5-15%2B4%2B21%2B59%2Bpm.jpg" class="gallery"/>
+		<img src="http://4.bp.blogspot.com/-ar9D59wRV3w/VXk_afPzWnI/AAAAAAAAFGE/Mm3UFsk-R0s/s640/Photo%2B16-5-15%2B7%2B09%2B54%2Bpm.jpg" class="gallery"/>
+		<img src="http://4.bp.blogspot.com/-LAF6tbNBEEk/VXk_Z1BrmTI/AAAAAAAAFGA/VLWJqJeepSU/s640/Photo%2B16-5-15%2B6%2B43%2B23%2Bpm.jpg" class="gallery"/>
+		<img src="http://4.bp.blogspot.com/-4Z2026waW8o/VaZyf-kVvEI/AAAAAAAAF0s/njXHtFQfMqU/s640/Photo%2B20-5-15%2B3%2B06%2B51%2Bpm.jpg" class="gallery"/>
+		<img src="http://3.bp.blogspot.com/-VRW2NOQCwNk/VYPsmQ2BOMI/AAAAAAAAFWU/iZAmDnu8-tw/s640/Photo%2B18-5-15%2B11%2B28%2B15%2Bam.jpg" class="gallery"/>
 	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+	  <span class="close"><i class="fa fa-times"></i></span>
+	  <img class="modal-content" id="img01">
+	  <div id="caption"></div>
+	</div>
+
+	<script>
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	// Get all images and insert the clicked image inside the modal
+	// Get the content of the image description and insert it inside the modal image caption
+	var images = document.getElementsByTagName('img');
+	var modalImg = document.getElementById("img01");
+	var i;
+	for (i = 0; i < images.length; i++) {
+	   images[i].onclick = function(){
+	       modal.style.display = "block";
+	       modalImg.src = this.src;
+	       modalImg.alt = this.alt;
+	       captionText.innerHTML = this.nextElementSibling.innerHTML;
+	   }
+	}
+	</script>
 
 	<div class="footer">
 		<hr/>
