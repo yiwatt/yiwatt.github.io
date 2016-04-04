@@ -123,6 +123,11 @@ p {
   display: inline;
 }
 
+.update {
+  margin-left: 550px;
+  font-size: 20px;
+}
+
 .social {
   display: inline-block;
   float: right;
